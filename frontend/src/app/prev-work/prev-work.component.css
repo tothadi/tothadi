@@ -1,0 +1,96 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 6vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .7);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    overflow-y: scroll;
+}
+
+h1 {
+    position: absolute;
+    top: 2vh;
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    margin: 0;
+}
+
+#refs {
+    width: 90%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    overflow-x: scroll;
+}
+
+.ref-group {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 42%;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, .5);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: black;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+    overflow: hidden;
+}
+
+.ref-group:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+img {
+    height: 35%;
+    align-self: center;
+}
+
+.ref-text {
+    width: 90%;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 2rem;
+    text-align: center;
+}
+
+h5 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .ref-group {
+        width: 80%;
+        flex-flow: column;
+    }
+    h3, h5 {
+        text-align: center;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .ref-group {
+        width: 28%;
+        flex-flow: column;
+    }
+}
