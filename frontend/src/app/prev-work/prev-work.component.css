@@ -36,21 +36,28 @@ h1 {
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: space-evenly;
     text-decoration: none;
     color: black;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .ref-group:hover {
     background-color: rgba(0, 0, 0, .2);
 }
 
+#image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 40%;
+    width: 100%;
+}
+
 img {
-    height: 35%;
+    height: 90%;
     align-self: center;
 }
 
@@ -68,7 +75,7 @@ h5 {
     text-align: center;
     font-size: 1.8rem;
     margin: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 p {
