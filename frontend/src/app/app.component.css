@@ -1,6 +1,6 @@
 
 app-navbar {
-  width: 90%;
+  width: 100%;
   max-width: 975px;
   height: 18%;
   position: fixed;
@@ -14,7 +14,7 @@ app-navbar {
 app-footer {
   background-color: rgba(255, 255, 255, .5);
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
-  width: 90%;
+  width: 100%;
   max-width: 975px;
   height: 12%;
   position: fixed;
