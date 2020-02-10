@@ -39,17 +39,48 @@ body {
 }
 
 app-root {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 100%;
   max-width: 975px;
 }
 
 app-contact, app-greeting, app-intro, app-prev-work {
-  position: relative;
-  top: 18%;
   display: flex;
-  height: 65%;
+  order: 2;
+  -ms-flex-order: 2;
+  height: 67%;
   width: 100%;
+}
+
+app-navbar {
+  margin-top: 1%;
+  width: 100%;
+  max-width: 975px;
+  height: 18%;
+  align-self: center;
+  display: flex;
+  order: 1;
+  -ms-flex-order: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+app-footer {
+  background-color: rgba(255, 255, 255, .5);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+  width: 100%;
+  max-width: 975px;
+  height: 12%;
+  margin-top: 1%;
+  align-self: center;
+  display: flex;
+  order: 3;
+  -ms-flex-order: 3;
+  justify-content: center;
+  align-items: center;
 }
 
 @media only screen and (max-width: 400px) {
