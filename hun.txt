@@ -1,0 +1,16 @@
+<h2>Bemutatkozás</h2>
+    <div id="marketing">
+        <p>Eredetileg biológus végzettséggel, de már általános iskolás korom óta erős IT érdeklődéssel rendelkezem.
+            <br>2016-ban kezdtem elsajátítani a webfejlesztés alapjait a codeberry.hu online képzésével. Az ott szerzett
+            alapokkal autodidakta módon fejlesztettem tovább tudásom, elsősorban a javascript
+            berkein belül.
+            <br>Jelenleg egy nonprofit Kft. alkalmazásában rendszergazdai, vállalatirányítási rendszer üzemeltetési és
+            fejlesztési feladatokkal foglalkozom.
+            <br>Leginkább a MEAN stack érdekel. Alapvetően full stack webfejlesztéssel szeretnék foglalkozni, de csak
+            frontend munkával is elégedett lennék.
+        </p>
+        <p>Az oldal alján megtalálható a GitHub repo-im, illetve a CodersRank profilom linkje.</p>
+    </div>
+
+
+    

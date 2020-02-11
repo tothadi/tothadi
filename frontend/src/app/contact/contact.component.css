@@ -110,8 +110,13 @@ select, input {
 button {
   align-self: center;
   vertical-align: middle;
-  height: 5vh;
-  font-size: 2vh;
+  line-height: 2rem;
+  font-size: 2rem;
+  padding: .8rem;
+}
+
+button:disabled {
+  background-color: rgba(255, 0, 0, .4);
 }
 
 @media only screen and (min-width: 700px) {

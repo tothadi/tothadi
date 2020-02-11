@@ -1,5 +1,5 @@
 <div id="container">
-    <h1>Küldj üzenetet!</h1>
+    <h1>Send a message!</h1>
     <div *ngIf="submitted; then thenBlock else elseBlock"></div>
 
     <ng-template #thenBlock>
@@ -15,25 +15,25 @@
     <ng-template #elseBlock>
         <form (ngSubmit)="sendMessage()">
             <div class="form-group">
-                <label for="name">Név</label>
+                <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" required [(ngModel)]="name" minlength="3" name="name"
-                    placeholder="név" #nameInput="ngModel">
+                    placeholder="your name" #nameInput="ngModel">
                 <div class="help error" *ngIf="nameInput.invalid && nameInput.dirty">
-                    Minimum 3 karakter hosszúságú név megadása kötelező.
+                    You have to provide a name at least 3 characters long.
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="address">Email cím</label>
+                <label for="address">Email</label>
                 <input type="text" class="form-control" id="address" required [(ngModel)]="address" email name="address"
-                    placeholder="email cím" #addressInput="ngModel">
+                    placeholder="your email address" #addressInput="ngModel">
                 <div class="help error" *ngIf="addressInput.invalid && addressInput.dirty">
-                    Valódi email cím megadása kötelező.
+                    You have to provide a valid email address.
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="subject">Tárgy</label>
+                <label for="subject">Subject</label>
                 <select class="form-control" id="subject" required [(ngModel)]="subject" name="subject"
                     #subjectInput="ngModel">
                     <option *ngFor="let subject of subjects" [value]=subject>{{subject}}</option>
@@ -41,22 +41,21 @@
             </div>
 
             <div class="form-group">
-                <label for="message">Üzenet szövege</label>
-                <textarea class="textarea form-control" id="message" required [(ngModel)]="message" minlength="10"
-                    name="message" placeholder="üzenet szövege" #messageInput="ngModel"></textarea>
+                <label for="message">Message</label>
+                <textarea class="textarea form-control" id="message" required [(ngModel)]="message" minlength="20"
+                    name="message" placeholder="Please type in your message" #messageInput="ngModel"></textarea>
                 <div class="help error" *ngIf="messageInput.invalid && messageInput.dirty">
-                    Minimum 10 karakter hosszúságú szöveg megadása kötelező.
+                    Your message must be at least 20 characters long.
                 </div>
             </div>
 
             <div id="sending">
                 <div id="check" class="form-group">
-                    <label for="copy">Másolatot kérek</label>
+                    <label for="copy">Send me a copy</label>
                     <input type="checkbox" [(ngModel)]="copy" [ngModelOptions]="{standalone: true}" id="copy">
                 </div>
                 <button type="submit" class="btn btn-success"
-                    [disabled]="nameInput.invalid || addressInput.invalid || subjectInput.invalid || messageInput.invalid || submitted">Üzenet
-                    elküldése</button>
+                    [disabled]="nameInput.invalid || addressInput.invalid || subjectInput.invalid || messageInput.invalid || submitted">Send</button>
             </div>
         </form>
     </ng-template>

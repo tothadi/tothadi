@@ -10,16 +10,16 @@ import { Subscription } from 'rxjs';
 
 export class ContactComponent implements OnInit, OnDestroy {
 
-  subjects = ['Általános érdeklődés', 'Díjak', 'Lehetőségek', 'Telefonszám kérése'];
+  subjects = ['Prices', 'Job opportunity', 'Other'];
 
   name: string;
   address: string;
   subject: string;
   message: string;
   copy = false;
-  sent_1 = 'Üzenet küldése...';
-  sent_2 = 'Üzenet elküldve!';
-  sent_3 = 'Próbálja újra!';
+  sent_1 = 'Sending message...';
+  sent_2 = 'Message succesfuly sent!';
+  sent_3 = 'Please try again!';
   status = 1;
 
   sent: string;
