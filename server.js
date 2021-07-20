@@ -5,10 +5,10 @@ const io = require('socket.io')(server);
 const path = require('path');
 const nodemailer = require('nodemailer');
 const port = process.env.PORT || 5000;
-const mailerHost = process.env.host;
-const mailerUser = process.env.user;
-const mailerPwd = process.env.pwd;
-const myEmail = process.env.email;
+const mailerHost = process.env.HOST;
+const mailerUser = process.env.USER;
+const mailerPwd = process.env.PWD
+const myEmail = process.env.EMAIL;
 
 io.set("transports", ["websocket"]);
 
