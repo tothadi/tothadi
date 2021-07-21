@@ -17,6 +17,8 @@ module.exports.sendMessage = (req, res) => {
         mailOptions,
         message = (req.body);
 
+        console.log(message)
+
     if (message.copy) {
         mailOptions = {
             from: [message.address, { name: message.name, address: message.address }],
