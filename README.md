@@ -1,10 +1,10 @@
-# TothadiDesign
+# tothadi.hu
 
 My own site for business purposes.
 
 ## Stack
 
-Node, Express, Angular, Bootstrap, Socketio, jQuery
+Node, Express, Angular, Docker, Kubernetes
 
 
 #### Link
