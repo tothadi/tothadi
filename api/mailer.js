@@ -40,7 +40,7 @@ module.exports.sendMessage = (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            res.json({ status: false, message: 'Server error, please try again later' });
+            res.json({ status: false, message: process.env.TEST });
         } else {
             const
                 message = info.response,
