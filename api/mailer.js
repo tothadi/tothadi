@@ -1,3 +1,5 @@
+const { getMaxListeners } = require('process');
+
 const
     nodemailer = require('nodemailer'),
     myEmail = process.env.EMAIL,
@@ -17,7 +19,7 @@ module.exports.sendMessage = (req, res) => {
         mailOptions,
         message = (req.body);
 
-        console.log(message)
+    console.log(message)
 
     if (message.copy) {
         mailOptions = {
@@ -36,17 +38,16 @@ module.exports.sendMessage = (req, res) => {
         }
     };
 
-    transporter.sendMail(mailOptions, function (error, info) {
+    transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            console.log(error);
-            res.status(500).json({ status: false });
+            res.json({ status: false, message: 'Server error, please try again later' });
         } else {
-            console.log('Email sent: ' + info.response);
-            if (parseInt(info.response.substr(0, 3)) == 250) {
-                res.status(250).json({ status: true });
-            } else {
-                res.status(500).json({ status: false });
-            }
+            const
+                message = info.response,
+                statusCode = parseInt(message.substr(0, 3)),
+                status = statusCode == 250 ? true : false;
+
+            res.status(statusCode).json({ status, message });
         }
     });
 
