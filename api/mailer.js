@@ -1,5 +1,3 @@
-const { getMaxListeners } = require('process');
-
 const
     nodemailer = require('nodemailer'),
     myEmail = process.env.EMAIL,
@@ -16,27 +14,19 @@ const
 module.exports.sendMessage = (req, res) => {
 
     let
-        mailOptions,
-        message = (req.body);
-
-    console.log(message)
-
-    if (message.copy) {
-        mailOptions = {
-            from: [message.address, { name: message.name, address: message.address }],
-            to: myEmail,
-            cc: message.address,
-            subject: message.subject,
-            html: '<p>' + message.text + '<br><br>' + message.text + '</p>'
-        }
-    } else {
+        message = req.body,
         mailOptions = {
             from: [message.address, { name: message.name, address: message.address }],
             to: myEmail,
             subject: message.subject,
             html: '<p>' + message.text + '<br><br>' + message.name + '</p>'
-        }
+        };
+
+    if (message.copy) {
+        mailOptions = { ...mailOptions, cc: message.address }
     };
+
+    console.log(mailOptions)
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
