@@ -4,7 +4,7 @@ const
     transporter = nodemailer.createTransport({
         host: process.env.HOST,
         port: process.env.MAIL_PORT,
-        secure: false, // upgrade later with STARTTLS
+        secure: true, // upgrade later with STARTTLS
         requireTLS: true,
         auth: {
             user: process.env.USER,
