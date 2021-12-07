@@ -10,9 +10,9 @@ const
             user: process.env.USER,
             pass: process.env.PWD
         },
-        // tls: {
-        //     ciphers:'SSLv3'
-        // }
+        tls: {
+            ciphers:'SSLv3'
+        }
     });
 
 module.exports.sendMessage = (req, res) => {
